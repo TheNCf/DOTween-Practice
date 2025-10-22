@@ -5,23 +5,28 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(MeshRenderer))]
-public class TextAnimation : MonoBehaviour
+public class TextAnimation : TweenAnimation
 {
+    [SerializeField] private string _replacedText = "Text replaced";
+    [SerializeField] private string _addedText = ".\n Text added";
+    [SerializeField] private string _scrambledText = "Text scrambled";
+
     private Text _text;
 
-    void Start()
+    private void Start()
     {
         _text = GetComponent<Text>();
 
         Sequence sequence = DOTween.Sequence();
 
-        sequence.Append(_text.DOText("Text replaced", 1.0f));
-        sequence.AppendInterval(1.0f);
-        sequence.Append(_text.DOText(".\n Text added", 1.0f).SetRelative(true));
-        sequence.AppendInterval(1.0f);
-        sequence.Append(_text.DOText("Text scrambled", 1.0f, scrambleMode: ScrambleMode.All));
-        sequence.AppendInterval(1.0f);
+        sequence.Append(_text.DOText("Text replaced", Duration));
+        sequence.AppendInterval(Duration);
+        sequence.Append(_text.DOText(".\n Text added", Duration).SetRelative(true));
+        sequence.AppendInterval(Duration);
+        sequence.Append(_text.DOText("Text scrambled", Duration, scrambleMode: ScrambleMode.All));
+        sequence.AppendInterval(Duration);
 
         sequence.SetLoops(-1, LoopType.Restart);
+        sequence.SetEase(EaseType);
     }
 }

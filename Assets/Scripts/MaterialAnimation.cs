@@ -4,14 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
-public class MaterialAnimation : MonoBehaviour
+public class MaterialAnimation : TweenAnimation
 {
+    [SerializeField] private Color _color;
+
     private Material _material;
 
-    void Start()
+    private void Start()
     {
         _material = GetComponent<MeshRenderer>().material;
 
-        _material.DOColor(Color.red, 1.0f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
+        _material.DOColor(_color, Duration)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(EaseType);
     }
 }

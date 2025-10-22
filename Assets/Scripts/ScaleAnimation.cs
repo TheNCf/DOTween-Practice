@@ -3,10 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScaleAnimation : MonoBehaviour
+public class ScaleAnimation : TweenAnimation
 {
-    void Start()
+    [SerializeField] private Vector3 _scale;
+
+    private void Start()
     {
-        transform.DOScale(new Vector3(2.0f, 2.0f, 2.0f), 1.0f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
+        transform.DOScale(_scale, Duration)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(EaseType);
     }
 }

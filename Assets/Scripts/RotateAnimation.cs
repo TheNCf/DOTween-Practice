@@ -3,10 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateAnimation : MonoBehaviour
+public class RotateAnimation : TweenAnimation
 {
-    void Start()
+    [SerializeField] private Vector3 _rotation;
+
+    private void Start()
     {
-        transform.DORotate(new Vector3(0.0f, 180.0f, 0.0f), 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
+        transform.DORotate(_rotation, Duration)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(EaseType);
     }
 }

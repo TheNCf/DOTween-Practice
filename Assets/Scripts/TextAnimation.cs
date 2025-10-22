@@ -26,7 +26,7 @@ public class TextAnimation : TweenAnimation
         sequence.Append(_text.DOText(_scrambledText, Duration, scrambleMode: ScrambleMode.All));
         sequence.AppendInterval(Duration);
 
-        sequence.SetLoops(-1, LoopType.Restart);
+        sequence.SetLoops(LoopCount, LoopType);
         sequence.SetEase(EaseType);
     }
 }

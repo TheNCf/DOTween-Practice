@@ -244,6 +244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _easeType: 7
+  _loopType: 1
+  _loopCount: -1
   _scale: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!114 &114261309
 MonoBehaviour:
@@ -259,6 +261,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _easeType: 7
+  _loopType: 1
+  _loopCount: -1
   _rotation: {x: 180, y: 0, z: 0}
 --- !u!114 &114261310
 MonoBehaviour:
@@ -274,6 +278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _easeType: 7
+  _loopType: 1
+  _loopCount: -1
   _translation: {x: 0, y: 4, z: 0}
 --- !u!1 &544714567
 GameObject:
@@ -397,6 +403,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _easeType: 7
+  _loopType: 1
+  _loopCount: -1
   _scale: {x: 2, y: 2, z: 2}
 --- !u!1 &705507993
 GameObject:
@@ -612,6 +620,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _easeType: 7
+  _loopType: 1
+  _loopCount: -1
   _rotation: {x: 0, y: 180, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -807,6 +817,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _easeType: 7
+  _loopType: 1
+  _loopCount: -1
   _translation: {x: 0, y: 4, z: 0}
 --- !u!135 &1018626317
 SphereCollider:
@@ -989,6 +1001,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _easeType: 7
+  _loopType: 0
+  _loopCount: -1
   _replacedText: Text replaced
   _addedText: ".\n Text added"
   _scrambledText: Text scrambled
@@ -1256,6 +1270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _easeType: 7
+  _loopType: 1
+  _loopCount: -1
   _color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

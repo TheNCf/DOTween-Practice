@@ -11,7 +11,7 @@ public class MoveAnimation : TweenAnimation
     {
         transform.DOMove(_translation, Duration)
             .SetRelative()
-            .SetLoops(-1, LoopType.Yoyo)
+            .SetLoops(LoopCount, LoopType)
             .SetEase(EaseType);
     }
 }

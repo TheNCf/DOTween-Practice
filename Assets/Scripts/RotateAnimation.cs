@@ -10,7 +10,7 @@ public class RotateAnimation : TweenAnimation
     private void Start()
     {
         transform.DORotate(_rotation, Duration)
-            .SetLoops(-1, LoopType.Yoyo)
+            .SetLoops(LoopCount, LoopType)
             .SetEase(EaseType);
     }
 }

@@ -10,7 +10,7 @@ public class ScaleAnimation : TweenAnimation
     private void Start()
     {
         transform.DOScale(_scale, Duration)
-            .SetLoops(-1, LoopType.Yoyo)
+            .SetLoops(LoopCount, LoopType)
             .SetEase(EaseType);
     }
 }

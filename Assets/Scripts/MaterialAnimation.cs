@@ -15,7 +15,7 @@ public class MaterialAnimation : TweenAnimation
         _material = GetComponent<MeshRenderer>().material;
 
         _material.DOColor(_color, Duration)
-            .SetLoops(-1, LoopType.Yoyo)
+            .SetLoops(LoopCount, LoopType)
             .SetEase(EaseType);
     }
 }

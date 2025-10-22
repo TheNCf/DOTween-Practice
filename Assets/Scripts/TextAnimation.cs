@@ -19,11 +19,11 @@ public class TextAnimation : TweenAnimation
 
         Sequence sequence = DOTween.Sequence();
 
-        sequence.Append(_text.DOText("Text replaced", Duration));
+        sequence.Append(_text.DOText(_replacedText, Duration));
         sequence.AppendInterval(Duration);
-        sequence.Append(_text.DOText(".\n Text added", Duration).SetRelative(true));
+        sequence.Append(_text.DOText(_addedText, Duration).SetRelative(true));
         sequence.AppendInterval(Duration);
-        sequence.Append(_text.DOText("Text scrambled", Duration, scrambleMode: ScrambleMode.All));
+        sequence.Append(_text.DOText(_scrambledText, Duration, scrambleMode: ScrambleMode.All));
         sequence.AppendInterval(Duration);
 
         sequence.SetLoops(-1, LoopType.Restart);
